@@ -1,0 +1,179 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter value to convert"
+        android:id="@+id/textView"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="DEC"
+        android:id="@+id/textView2"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="BIN:"
+        android:id="@+id/textView3"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="OCT:"
+        android:id="@+id/textView4"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="B12:"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="39dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="HEX:"
+        android:id="@+id/textView6"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="B20:"
+        android:id="@+id/textView7"
+        android:layout_marginTop="48dp"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/decimalTextbox"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_above="@+id/textView3"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:editable="true"
+        android:enabled="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/HexTextbox"
+        android:digits="0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F"
+        android:layout_above="@+id/textView7"
+        android:layout_alignLeft="@+id/decimalTextbox"
+        android:layout_alignStart="@+id/decimalTextbox"
+        android:layout_alignRight="@+id/decimalTextbox"
+        android:layout_alignEnd="@+id/decimalTextbox" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/clearButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:elegantTextHeight="true"
+        android:layout_alignRight="@+id/HexTextbox"
+        android:layout_alignEnd="@+id/HexTextbox" />
+
+    Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:id="@+id/convertButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:singleLine="false"
+        android:elegantTextHeight="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/binTextbox"
+        android:layout_above="@+id/textView4"
+        android:digits="10"
+        android:layout_alignRight="@+id/decimalTextbox"
+        android:layout_alignEnd="@+id/decimalTextbox"
+        android:layout_alignLeft="@+id/decimalTextbox"
+        android:layout_alignStart="@+id/decimalTextbox" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/octTextBox"
+        android:digits="0,1,2,3,4,5,6,7"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignRight="@+id/binTextbox"
+        android:layout_alignEnd="@+id/binTextbox"
+        android:layout_alignLeft="@+id/decimalTextbox"
+        android:layout_alignStart="@+id/decimalTextbox" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView6"
+        android:digits="0,1,2,3,4,5,6,7,8,9,A,B"
+        android:layout_alignLeft="@+id/HexTextbox"
+        android:layout_alignStart="@+id/HexTextbox"
+        android:layout_alignRight="@+id/HexTextbox"
+        android:layout_alignEnd="@+id/HexTextbox"
+        android:id="@+id/B12Textbox" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/B20Textbox"
+        android:digits="0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G,H,I,J,K"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_alignLeft="@+id/HexTextbox"
+        android:layout_alignStart="@+id/HexTextbox"
+        android:layout_alignRight="@+id/HexTextbox"
+        android:layout_alignEnd="@+id/HexTextbox" />
+</RelativeLayout>
