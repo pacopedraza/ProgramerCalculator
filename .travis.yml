@@ -1,0 +1,12 @@
+language: java
+java:
+        - 7.0
+        - 8.0
+
+before_script:
+        - composer install --no-interaction
+
+script : 
+        - path/to/unittests
+
+
